@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(20deg, #020719 0%, #1a0724 100%);
+    top:0;
+    z-index: 1;
+}
+
+section{
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+.navbar{
+    width: 1500px;
+}
+
+.stylized-text{
+    font-family: "Shadows Into Light", cursive;
+    font-size: 1.25rem;
+}
+@media (max-width: 992px){
+    .nav-center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto 
+    }
+    
+    
+    .hero{
+        font-size: 10px;
+    }
+    
+    .searchbox-hero{
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .center-align-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .scroll{
+        width: 250px;
+    }
+    
+}
