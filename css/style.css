@@ -20,6 +20,11 @@ section{
     width: 1500px;
 }
 
+.collapse.show {
+    visibility: visible;
+}
+
+
 .stylized-text{
     font-family: "Shadows Into Light", cursive;
     font-size: 1.25rem;
