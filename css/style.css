@@ -29,6 +29,17 @@ section{
     font-family: "Shadows Into Light", cursive;
     font-size: 1.25rem;
 }
+
+.accordion-item{
+    --bs-accordion-border-color: none;
+    --bs-accordion-bg: none;
+    --bs-accordion-color: white;
+    --bs-accordion-btn-color: white;
+    --bs-accordion-btn-bg: #1d293d;
+    --bs-accordion-active-color: white;
+    --bs-accordion-active-bg: #1d293d;
+}
+
 @media (max-width: 992px){
     .nav-center{
         display: block;
