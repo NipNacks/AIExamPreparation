@@ -43,6 +43,11 @@ section{
 .modal-dialog{
     --bs-modal-bg: #1d293d;
     --bs-modal-color: white;
+    --bs-modal-footer-bg: #1d293d;
+}
+
+.upload_box{
+    width: 1100px;
 }
 
 @media (max-width: 992px){

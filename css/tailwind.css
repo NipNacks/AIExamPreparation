@@ -9,6 +9,7 @@
     --color-red-500: oklch(0.637 0.237 25.331);
     --color-green-200: oklch(0.925 0.084 155.995);
     --color-slate-800: oklch(0.279 0.041 260.031);
+    --color-neutral-400: oklch(0.708 0 0);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-xs: 0.75rem;
@@ -1444,6 +1445,9 @@
   .text-green-200 {
     color: var(--color-green-200);
   }
+  .text-neutral-400 {
+    color: var(--color-neutral-400);
+  }
   .text-white {
     color: var(--color-white);
   }
@@ -1936,6 +1940,10 @@ section {
 .modal-dialog {
   --bs-modal-bg: #1d293d;
   --bs-modal-color: white;
+  --bs-modal-footer-bg: #1d293d;
+}
+.upload_box {
+  width: 1100px;
 }
 @media (max-width: 992px) {
   .nav-center {
