@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>OpenRouter Chat (DeepSeek)</title>
-</head>
+<head><title>OpenRouter Frontend Test</title></head>
 <body>
-  <h2>Ask DeepSeek (via OpenRouter)</h2>
+  <h3>Ask Claude via OpenRouter</h3>
   <input type="text" id="userInput" placeholder="Ask something..." size="40">
   <button onclick="callOpenRouter()">Send</button>
   <pre id="output"></pre>
@@ -20,23 +18,27 @@
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer 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" // Replace this
+            "Authorization": "Bearer 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" // <-- Replace this
           },
           body: JSON.stringify({
-            model: "deepseek/deepseek-chat", // or try other models
-            messages: [
-              { role: "system", content: "You are a helpful assistant." },
-              { role: "user", content: input }
-            ]
+            model: "anthropic/claude-3-haiku", // Works well for most users
+            messages: [{ role: "user", content: input }]
           })
         });
 
         const data = await response.json();
-        console.log(data); // for debugging
-        output.textContent = data.choices?.[0]?.message?.content || "No response";
+        console.log("Response:", data);
+
+        if (data.error) {
+          output.textContent = "❌ Error: " + data.error.message;
+        } else if (data.choices?.[0]?.message?.content) {
+          output.textContent = data.choices[0].message.content;
+        } else {
+          output.textContent = "⚠️ No valid response.";
+        }
       } catch (err) {
-        console.error(err);
-        output.textContent = "Error: " + err.message;
+        console.error("Fetch error:", err);
+        output.textContent = "⚠️ Fetch error: " + err.message;
       }
     }
   </script>
