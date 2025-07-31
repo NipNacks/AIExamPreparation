@@ -137,7 +137,7 @@
         const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
           method: "POST",
           headers: {"Content-Type":"application/json","Authorization":"Bearer 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"},
-          body: JSON.stringify({model:"deepseek/deepseek-chat",messages:[{role:"user",content:`Please summarize this content and explain it to me like a teacher ${levelInstruction}:
+          body: JSON.stringify({model:"openai/gpt-3.5-turbo",messages:[{role:"user",content:`Search online and explain the content of each page fully to me like a teacher. Include the terms and definitions included in each page and fully explain it. Make sure to use all of the pages and list each. ${levelInstruction}:
 
 ${text}`}]})
         });
